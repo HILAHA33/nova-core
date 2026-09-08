@@ -1,0 +1,1542 @@
+[
+  {
+    "id": "fact-1788883625124-t313m",
+    "text": "Bytecode isolation is ensured by preventing arbitrary kernel memory access and restricting interaction with the host kernel to verified helper functions, kfuncs, and sandboxed BPF maps.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883625124,
+    "updatedAt": 1788883625124
+  },
+  {
+    "id": "fact-1788883625124-cwf2a",
+    "text": "Memory safety in eBPF is enforced through abstract interpretation, strictly tracking register pointer types, state bounds, and memory alignment to prevent out-of-bounds reads and writes.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883625124,
+    "updatedAt": 1788883625124
+  },
+  {
+    "id": "fact-1788883625123-blal3",
+    "text": "The Linux kernel eBPF verifier guarantees termination by constructing a control-flow graph (CFG) to enforce bounded loops and limiting total processed instruction states.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883625123,
+    "updatedAt": 1788883625123
+  },
+  {
+    "id": "fact-1788883498775-ua7ks",
+    "text": "Once a state snapshot is successfully persisted, the Raft log safely truncates and discards all committed entries up to the snapshot's last included index and term.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883498775,
+    "updatedAt": 1788883498775
+  },
+  {
+    "id": "fact-1788883498775-pz2qb",
+    "text": "While snapshot I/O is written to disk, incoming leader replication and log appends continue concurrently on the active log without waiting for the snapshot to complete.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883498775,
+    "updatedAt": 1788883498775
+  },
+  {
+    "id": "fact-1788883498774-l83yu",
+    "text": "Raft engines prevent client write stalls during log compaction by performing state snapshotting asynchronously in a background thread using Copy-on-Write (CoW) or point-in-time state machine views.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883498774,
+    "updatedAt": 1788883498774
+  },
+  {
+    "id": "fact-1788883397453-bb7kz",
+    "text": "If a lagging follower requires log entries that have already been truncated due to compaction, the leader transmits an InstallSnapshot RPC instead of standard AppendEntries RPCs.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883397453,
+    "updatedAt": 1788883397453
+  },
+  {
+    "id": "fact-1788883397452-1abg6",
+    "text": "Once a snapshot is safely persisted to disk, log entries up to the snapshot's lastIncludedIndex and lastIncludedTerm are truncated to free up storage.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883397452,
+    "updatedAt": 1788883397452
+  },
+  {
+    "id": "fact-1788883397452-jqyi2",
+    "text": "Raft consensus engines achieve non-blocking log compaction by taking asynchronous background snapshots using Copy-on-Write (COW) forks or point-in-time storage engine checkpoints while active writes continue appending to the log.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883397452,
+    "updatedAt": 1788883397452
+  },
+  {
+    "id": "fact-1788883298402-k5f5c",
+    "text": "Tesla coils require a dedicated RF earth ground separate from household mains grounding to prevent high-frequency electrical feedback from damaging electronics.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883298402,
+    "updatedAt": 1788883298402
+  },
+  {
+    "id": "fact-1788883298401-i7yfm",
+    "text": "An MMC (Multi-Mini-Capacitor) bank consists of a series-parallel array of pulse-rated capacitors paired with bleeder resistors to handle high peak voltages and currents.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883298401,
+    "updatedAt": 1788883298401
+  },
+  {
+    "id": "fact-1788883298401-tkrwv",
+    "text": "The resonant frequency of a Tesla coil LC tank circuit is calculated using the formula f = 1 / (2 * pi * sqrt(L * C)).",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883298401,
+    "updatedAt": 1788883298401
+  },
+  {
+    "id": "fact-1788883295036-beapj",
+    "text": "Core components of a spark-gap Tesla coil include a high-voltage transformer, pulse-rated capacitor bank (MMC), spark gap switch, primary coil, secondary coil, and toroidal top load.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883295036,
+    "updatedAt": 1788883295036
+  },
+  {
+    "id": "fact-1788883295036-t0s26",
+    "text": "The secondary base of a Tesla coil must connect to a dedicated outdoor earth ground to prevent destructive RF feedback into household wiring.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883295036,
+    "updatedAt": 1788883295036
+  },
+  {
+    "id": "fact-1788883295035-m6yw5",
+    "text": "A Tesla coil relies on dual resonance where both the primary and secondary LC circuits are tuned to the exact same resonant frequency.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883295035,
+    "updatedAt": 1788883295035
+  },
+  {
+    "id": "fact-1788883225672-ynroa",
+    "text": "Compile-time code execution allows pre-calculating exact buffer sizes and memory alignment, eliminating runtime heap allocations by using fixed-capacity stack or static structures.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883225672,
+    "updatedAt": 1788883225672
+  },
+  {
+    "id": "fact-1788883225672-yjga7",
+    "text": "C++20 Concepts act as type constraints and predicates for templates, whereas compile-time layout generation in C++ relies on template metaprogramming and constexpr.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883225672,
+    "updatedAt": 1788883225672
+  },
+  {
+    "id": "fact-1788883225671-033v9",
+    "text": "Zig comptime uses standard imperative language syntax at compile time to manipulate types and generate data layouts like Struct-of-Arrays (SoA) for optimal SIMD vectorization.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883225671,
+    "updatedAt": 1788883225671
+  },
+  {
+    "id": "fact-1788883143480-75kkf",
+    "text": "In I/O-bound microservices, Rust provides lower memory footprint and zero garbage collection pauses, whereas Go prioritizes developer productivity with built-in runtime garbage collection.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883143480,
+    "updatedAt": 1788883143480
+  },
+  {
+    "id": "fact-1788883143479-s08k3",
+    "text": "Tokio uses an explicit cooperative polling model (`Poll::Ready`/`Pending`) over an event reactor like epoll, while Go features language-integrated preemptive scheduling and runtime channel multiplexing.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883143479,
+    "updatedAt": 1788883143479
+  },
+  {
+    "id": "fact-1788883143479-9e1o3",
+    "text": "Rust Futures are stackless state machines compiled without mandatory heap allocations, whereas Go goroutines are stackful coroutines with dynamically resizing stacks managed by an M:N runtime scheduler.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883143479,
+    "updatedAt": 1788883143479
+  },
+  {
+    "id": "fact-1788883093018-yibfu",
+    "text": "Action minimizes variational free energy through Active Inference by altering the environment to match the agent's internal expectations.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883093018,
+    "updatedAt": 1788883093018
+  },
+  {
+    "id": "fact-1788883093017-mvyn2",
+    "text": "Perception minimizes variational free energy by updating internal beliefs and representations to fit incoming sensory data.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883093017,
+    "updatedAt": 1788883093017
+  },
+  {
+    "id": "fact-1788883093016-uoj0g",
+    "text": "The Free Energy Principle (FEP) was formulated by neuroscientist Karl Friston, not Albert Einstein.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883093016,
+    "updatedAt": 1788883093016
+  },
+  {
+    "id": "fact-1788883029118-clzs4",
+    "text": "Leveled compaction maintains non-overlapping key ranges within each level, offering lower space amplification and better read latency at the cost of a higher Write Amplification Factor (WAF).",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883029118,
+    "updatedAt": 1788883029118
+  },
+  {
+    "id": "fact-1788883029116-gjk3b",
+    "text": "Tiered compaction in LSM-trees minimizes Write Amplification Factor (WAF) at the expense of higher space amplification and higher read latency due to multiple overlapping runs per level.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788883029116,
+    "updatedAt": 1788883029116
+  },
+  {
+    "id": "fact-1788882978147-wdwkw",
+    "text": "Block interleaving scrambles output bits between the inner and outer decoders, spreading burst errors across multiple Reed-Solomon codewords so the outer code can easily correct them.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882978147,
+    "updatedAt": 1788882978147
+  },
+  {
+    "id": "fact-1788882978147-nnu7l",
+    "text": "Viterbi decoding of the inner convolutional code tends to produce localized burst errors when signal quality drops.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882978147,
+    "updatedAt": 1788882978147
+  },
+  {
+    "id": "fact-1788882978146-65eg3",
+    "text": "Concatenated Forward Error Correction (FEC) pairs an inner convolutional code with an outer Reed-Solomon (RS) block code to optimize space telemetry downlinks.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882978146,
+    "updatedAt": 1788882978146
+  },
+  {
+    "id": "fact-1788882743120-jc8ne",
+    "text": "Stabilizer measurements detect bit-flip (X) and phase-flip (Z) errors by measuring multi-qubit parity operators using ancilla qubits, revealing error syndromes without measuring or collapsing individual data qubit states.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882743120,
+    "updatedAt": 1788882743120
+  },
+  {
+    "id": "fact-1788882743119-a156k",
+    "text": "2D surface codes are a leading fault-tolerant quantum architecture because they rely solely on local 2D nearest-neighbor qubit interactions and have a relatively high error threshold (~1%).",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882743119,
+    "updatedAt": 1788882743119
+  },
+  {
+    "id": "fact-1788882714817-ugiep",
+    "text": "Vector clock updates require incrementing the local process entry for local events and taking the element-wise maximum of vectors upon receiving a message.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882714818,
+    "updatedAt": 1788882714818
+  },
+  {
+    "id": "fact-1788882714817-kfe9g",
+    "text": "Vector clocks can explicitly identify concurrent events because V(a) < V(b) if and only if event 'a' causally preceded event 'b', unlike scalar Lamport timestamps which cannot distinguish between causally dependent and concurrent events.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882714817,
+    "updatedAt": 1788882714817
+  },
+  {
+    "id": "fact-1788882714816-r2y1q",
+    "text": "A vector clock consists of an array of N logical clocks (one per process) to track system-wide causal history, whereas a Lamport timestamp uses a single scalar integer per process.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882714816,
+    "updatedAt": 1788882714816
+  },
+  {
+    "id": "fact-1788882677447-msfc0",
+    "text": "If escape analysis determines an object does not escape its allocating method or thread, the JIT compiler can allocate it on the stack rather than the heap.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882677447,
+    "updatedAt": 1788882677447
+  },
+  {
+    "id": "fact-1788882677447-sqm4z",
+    "text": "Scalar replacement decomposes non-escaping objects into individual primitive fields, eliminating heap allocation by placing values directly in CPU registers or local stack slots.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882677447,
+    "updatedAt": 1788882677447
+  },
+  {
+    "id": "fact-1788882677446-qgbhu",
+    "text": "Static Single Assignment (SSA) simplifies escape analysis by making object reference flows and alias relationships explicit across control flow paths.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882677446,
+    "updatedAt": 1788882677446
+  },
+  {
+    "id": "fact-1788882632420-vdxmx",
+    "text": "Verification of a KZG proof relies on bilinear pairings to verify the polynomial division relationship q(x)(x - z) = p(x) - p(z) in a single group operation.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882632420,
+    "updatedAt": 1788882632420
+  },
+  {
+    "id": "fact-1788882632419-66mqf",
+    "text": "A KZG commitment represents a polynomial as a single group element by evaluating the polynomial in the exponent using a Structured Reference String (SRS) from a trusted setup.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882632419,
+    "updatedAt": 1788882632419
+  },
+  {
+    "id": "fact-1788882632418-rccwn",
+    "text": "KZG evaluation proofs are constant-size (O(1)) because the proof consists of a single elliptic curve point representing the commitment to the quotient polynomial q(x) = (p(x) - p(z)) / (x - z).",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882632418,
+    "updatedAt": 1788882632418
+  },
+  {
+    "id": "fact-1788882536529-167lp",
+    "text": "Kernel isolation is maintained by restricting eBPF bytecode execution to a sandboxed environment that can only interact with the kernel through whitelisted helper functions and typed program contexts.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882536529,
+    "updatedAt": 1788882536529
+  },
+  {
+    "id": "fact-1788882536529-5mt8u",
+    "text": "Memory safety is enforced using abstract interpretation to track register states (scalars vs pointers), strictly validating pointer arithmetic and verifying stack/map access bounds.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882536529,
+    "updatedAt": 1788882536529
+  },
+  {
+    "id": "fact-1788882536523-vgrit",
+    "text": "The eBPF verifier guarantees termination through static analysis of the Control Flow Graph (CFG) to reject unbounded loops and enforce instruction path limits.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882536523,
+    "updatedAt": 1788882536523
+  },
+  {
+    "id": "fact-1788882403415-t397o",
+    "text": "MQA and GQA preserve multi-head representation capacity by maintaining multiple distinct Query heads while drastically shrinking the KV cache memory footprint during autoregressive inference.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882403415,
+    "updatedAt": 1788882403415
+  },
+  {
+    "id": "fact-1788882403415-xt8uj",
+    "text": "Grouped-Query Attention (GQA) divides Query heads into groups where each group shares one Key head and one Value head, balancing decoding speed with representation quality.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882403415,
+    "updatedAt": 1788882403415
+  },
+  {
+    "id": "fact-1788882403414-cyt7y",
+    "text": "Multi-Query Attention (MQA) reduces Key-Value (KV) cache memory bandwidth by sharing a single Key head and a single Value head across all Query heads.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882403414,
+    "updatedAt": 1788882403414
+  },
+  {
+    "id": "fact-1788882291553-jwxsi",
+    "text": "If a follower's log lags behind the leader's truncated log, the leader sends the snapshot using the `InstallSnapshot` RPC instead of standard `AppendEntries`.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882291553,
+    "updatedAt": 1788882291553
+  },
+  {
+    "id": "fact-1788882291553-ox9tc",
+    "text": "A Raft snapshot replaces committed log entries up to a given point and stores metadata including `lastIncludedIndex` and `lastIncludedTerm` to maintain log consistency.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882291553,
+    "updatedAt": 1788882291553
+  },
+  {
+    "id": "fact-1788882291552-i0s9p",
+    "text": "Raft achieves non-blocking snapshots by executing state machine serialization asynchronously in a background thread or using Copy-on-Write (COW) memory forks.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882291552,
+    "updatedAt": 1788882291552
+  },
+  {
+    "id": "fact-1788882285322-x9y2a",
+    "text": "Futuristic car designs typically emphasize aerodynamic silhouettes, advanced powertrains (EV/hybrid), carbon fiber materials, and modern LED lighting.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882285322,
+    "updatedAt": 1788882285322
+  },
+  {
+    "id": "fact-1788882285322-np6y7",
+    "text": "Text-only language models cannot generate image files directly, but can provide detailed text prompts for image-generation tools.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882285322,
+    "updatedAt": 1788882285322
+  },
+  {
+    "id": "fact-1788882285321-ddxcf",
+    "text": "A Tesla Supercharger is an external electric vehicle charging station, not an internal engine or power source.",
+    "category": "domain_knowledge",
+    "tags": [
+      "auto-learned",
+      "teacher-gemini"
+    ],
+    "source": "user_interaction",
+    "confidence": 0.95,
+    "createdAt": 1788882285321,
+    "updatedAt": 1788882285321
+  },
+  {
+    "id": "fact-1788828868155-2e6q5",
+    "text": "Swift Actors guarantee compile-time data race safety by isolating mutable state and serializing access through asynchronous message mailboxes.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "java",
+      "loom",
+      "kotlin",
+      "coroutines",
+      "swift",
+      "actors",
+      "concurrency"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788828868155,
+    "updatedAt": 1788832112177
+  },
+  {
+    "id": "fact-1788828868155-31bid",
+    "text": "Kotlin Coroutines offer fine-grained structured concurrency hierarchies and reactive Flow backpressure pipelines across Android, JVM, and Multiplatform targets.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "java",
+      "loom",
+      "kotlin",
+      "coroutines",
+      "swift",
+      "actors",
+      "concurrency"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788828868155,
+    "updatedAt": 1788832112177
+  },
+  {
+    "id": "fact-1788828868155-th0sn",
+    "text": "Java 21 Project Loom Virtual Threads unmount from carrier OS threads on blocking I/O, allowing legacy synchronous blocking code to achieve reactive asynchronous throughput.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "java",
+      "loom",
+      "kotlin",
+      "coroutines",
+      "swift",
+      "actors",
+      "concurrency"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788828868155,
+    "updatedAt": 1788832112176
+  },
+  {
+    "id": "fact-1788828858843-nks11",
+    "text": "Asynchronous I/O event loops can delegate CPU-intensive mathematical or cryptographic tasks to dedicated sub-interpreters without inter-process IPC serialization overhead.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "python",
+      "asyncio",
+      "sub_interpreters",
+      "gil",
+      "concurrency"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788828858843,
+    "updatedAt": 1788883225653
+  },
+  {
+    "id": "fact-1788828858843-y9iyw",
+    "text": "Python 3.12 sub-interpreters isolate the GIL per sub-interpreter, allowing threads in separate interpreters to execute pure Python bytecode in parallel across CPU cores.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "python",
+      "asyncio",
+      "sub_interpreters",
+      "gil",
+      "concurrency"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788828858843,
+    "updatedAt": 1788883225652
+  },
+  {
+    "id": "fact-1788828858842-kig3i",
+    "text": "Prior Python versions enforced a single global interpreter lock (GIL) across all threads, restricting CPU-bound concurrency to multiprocessing IPC.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "python",
+      "asyncio",
+      "sub_interpreters",
+      "gil",
+      "concurrency"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788828858842,
+    "updatedAt": 1788883225650
+  },
+  {
+    "id": "fact-1788828848267-2jx5d",
+    "text": "Both paradigms enable cache-conscious struct-of-arrays (SoA) layout generation, maximizing CPU vector SIMD execution pipelines.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "cpp",
+      "zig",
+      "comptime",
+      "templates",
+      "memory_layout",
+      "simd"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788828848267,
+    "updatedAt": 1788883186936
+  },
+  {
+    "id": "fact-1788828848267-5egxy",
+    "text": "C++20 Concepts restrict template substitutions with boolean constraints, improving compiler diagnostics while maintaining zero-overhead inline code generation.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "cpp",
+      "zig",
+      "comptime",
+      "templates",
+      "memory_layout",
+      "simd"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788828848267,
+    "updatedAt": 1788883186936
+  },
+  {
+    "id": "fact-1788828848267-7psez",
+    "text": "Zig comptime allows executing standard Zig code during compilation, enabling generic data structures without macro preprocessors or complex template error cascades.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "cpp",
+      "zig",
+      "comptime",
+      "templates",
+      "memory_layout",
+      "simd"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788828848267,
+    "updatedAt": 1788883186934
+  },
+  {
+    "id": "fact-1788828838955-yem8k",
+    "text": "For sub-millisecond tail latency and zero-copy packet processing, Rust eliminates data races at compile-time, while Go provides rapid developer ergonomics with channel select statements.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "rust",
+      "go",
+      "concurrency",
+      "tokio",
+      "goroutines",
+      "polyglot"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788828838955,
+    "updatedAt": 1788883136613
+  },
+  {
+    "id": "fact-1788828838954-h7b5s",
+    "text": "Go goroutines utilize dynamically growing 2KB stacks managed by the runtime GMP scheduler, prioritizing simplicity and fast context switches at the expense of non-deterministic GC sweeps.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "rust",
+      "go",
+      "concurrency",
+      "tokio",
+      "goroutines",
+      "polyglot"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788828838954,
+    "updatedAt": 1788883136612
+  },
+  {
+    "id": "fact-1788828838954-pcp0u",
+    "text": "Rust futures compile to zero-allocation state machines polled cooperatively by the Tokio runtime, enforcing Send and Sync safety at compile time without garbage collector pauses.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "rust",
+      "go",
+      "concurrency",
+      "tokio",
+      "goroutines",
+      "polyglot"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788828838954,
+    "updatedAt": 1788883136610
+  },
+  {
+    "id": "fact-1788826412254-p413q",
+    "text": "Action selects environmental policy trajectories that alter external states to conform to the agent prior preferences, achieving goal-directed behavior without external reward signals.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "active_inference",
+      "free_energy_principle",
+      "predictive_coding",
+      "cognitive_science",
+      "agents"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826412254,
+    "updatedAt": 1788883058045
+  },
+  {
+    "id": "fact-1788826412254-s41s5",
+    "text": "Perception optimizes internal model parameters and generative beliefs to minimize the prediction error between expected sensory inputs and observed reality.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "active_inference",
+      "free_energy_principle",
+      "predictive_coding",
+      "cognitive_science",
+      "agents"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826412254,
+    "updatedAt": 1788883058044
+  },
+  {
+    "id": "fact-1788826412253-yi8ep",
+    "text": "Variational free energy serves as an information-theoretic upper bound on surprise (negative log-evidence) of agent sensory observations.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "active_inference",
+      "free_energy_principle",
+      "predictive_coding",
+      "cognitive_science",
+      "agents"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826412253,
+    "updatedAt": 1788883058040
+  },
+  {
+    "id": "fact-1788826402041-0dep7",
+    "text": "Tiered (size-tiered) compaction groups SSTables of similar sizes together without immediate key deduplication, achieving optimal write throughput for heavy ingestion workloads.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "lsm_trees",
+      "storage_engines",
+      "compaction",
+      "write_amplification",
+      "databases"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826402041,
+    "updatedAt": 1788882997756
+  },
+  {
+    "id": "fact-1788826402041-dvkg3",
+    "text": "Leveled compaction maintains disjoint key ranges across sorted runs, minimizing read amplification at the expense of higher write amplification during background merge compaction.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "lsm_trees",
+      "storage_engines",
+      "compaction",
+      "write_amplification",
+      "databases"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826402041,
+    "updatedAt": 1788882997756
+  },
+  {
+    "id": "fact-1788826402041-gdp9f",
+    "text": "LSM Trees ingest all write mutations sequentially into an in-memory MemTable and append-only Write-Ahead Log (WAL), converting random disk writes into high-speed sequential flushes to Level 0 SSTables.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "lsm_trees",
+      "storage_engines",
+      "compaction",
+      "write_amplification",
+      "databases"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826402041,
+    "updatedAt": 1788882997754
+  },
+  {
+    "id": "fact-1788826392662-c3enr",
+    "text": "Block interleaving disperses these localized error bursts across multiple timeframes, allowing the outer Reed-Solomon algebraic block code to correct the dispersed symbol errors with mathematical certainty.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "telemetry",
+      "aerospace",
+      "reed_solomon",
+      "fec",
+      "signal_processing"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826392662,
+    "updatedAt": 1788882945435
+  },
+  {
+    "id": "fact-1788826392662-j9icq",
+    "text": "Convolutional inner codes with Viterbi decoding correct random bit errors, but occasional uncorrected errors cascade into dense localized error bursts.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "telemetry",
+      "aerospace",
+      "reed_solomon",
+      "fec",
+      "signal_processing"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826392662,
+    "updatedAt": 1788882945434
+  },
+  {
+    "id": "fact-1788826392661-9byp6",
+    "text": "Deep space radio channels suffer from low signal-to-noise ratios and bursty cosmic microwave interference.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "telemetry",
+      "aerospace",
+      "reed_solomon",
+      "fec",
+      "signal_processing"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826392661,
+    "updatedAt": 1788882945432
+  },
+  {
+    "id": "fact-1788826382331-058yy",
+    "text": "Because syndrome measurements extract only parity error syndromes and zero information about encoded quantum states, the fragile superposition remains completely preserved.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "quantum_computing",
+      "surface_codes",
+      "error_correction",
+      "superposition",
+      "physics"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826382331,
+    "updatedAt": 1788882737051
+  },
+  {
+    "id": "fact-1788826382331-y0dhk",
+    "text": "Stabilizer measurements continuously measure multi-qubit Pauli operator parities (X and Z stabilizers) to detect error locations without measuring the data qubits directly.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "quantum_computing",
+      "surface_codes",
+      "error_correction",
+      "superposition",
+      "physics"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826382331,
+    "updatedAt": 1788882737050
+  },
+  {
+    "id": "fact-1788826382330-jnzon",
+    "text": "Surface codes arrange physical data qubits on a 2D square lattice interleaved with ancilla syndrome qubits, allowing nearest-neighbor coupling operations.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "quantum_computing",
+      "surface_codes",
+      "error_correction",
+      "superposition",
+      "physics"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826382330,
+    "updatedAt": 1788882737048
+  },
+  {
+    "id": "fact-1788826372490-weki7",
+    "text": "If neither vector dominates the other, the events are mathematically concurrent, triggering domain-specific resolution strategies like CRDT merge rules or application-level reconciliation.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "vector_clocks",
+      "causality",
+      "distributed_clocks",
+      "crdt",
+      "concurrency"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826372490,
+    "updatedAt": 1788882697727
+  },
+  {
+    "id": "fact-1788826372490-cp46g",
+    "text": "Event A causally precedes Event B if and only if every clock value in Vector A is less than or equal to Vector B, and at least one clock value is strictly smaller.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "vector_clocks",
+      "causality",
+      "distributed_clocks",
+      "crdt",
+      "concurrency"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826372490,
+    "updatedAt": 1788882697727
+  },
+  {
+    "id": "fact-1788826372490-bn3ac",
+    "text": "While Lamport Timestamps provide a total order that cannot distinguish between causally dependent and concurrent events, Vector Clocks track an array of logical clocks across all participating nodes.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "vector_clocks",
+      "causality",
+      "distributed_clocks",
+      "crdt",
+      "concurrency"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826372490,
+    "updatedAt": 1788882697725
+  },
+  {
+    "id": "fact-1788826361617-kfvyy",
+    "text": "If an object does not escape the local scope, the compiler executes scalar replacement, decomposing the object into primitive CPU register values and bypassing heap allocation entirely.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "compilers",
+      "jit",
+      "ssa_form",
+      "escape_analysis",
+      "memory_optimization"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826361617,
+    "updatedAt": 1788882659112
+  },
+  {
+    "id": "fact-1788826361617-ur9ma",
+    "text": "Escape analysis determines if an instantiated object pointer is stored in global state, passed to un-inlined foreign methods, or returned outside the current activation frame.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "compilers",
+      "jit",
+      "ssa_form",
+      "escape_analysis",
+      "memory_optimization"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826361617,
+    "updatedAt": 1788882659112
+  },
+  {
+    "id": "fact-1788826361617-8yoe1",
+    "text": "SSA form guarantees every variable is assigned exactly once, simplifying data-flow graph analysis and variable liveness tracking.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "compilers",
+      "jit",
+      "ssa_form",
+      "escape_analysis",
+      "memory_optimization"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826361617,
+    "updatedAt": 1788882659110
+  },
+  {
+    "id": "fact-1788826351666-6skh3",
+    "text": "Verification requires exactly two pairing operations, remaining O(1) in size and constant in verification time irrespective of the degree of the committed polynomial.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "zero_knowledge",
+      "zk_snarks",
+      "kzg",
+      "cryptography",
+      "polynomials"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826351666,
+    "updatedAt": 1788882605053
+  },
+  {
+    "id": "fact-1788826351666-2egbp",
+    "text": "A prover demonstrates that a polynomial evaluates to y at point z by providing a quotient polynomial commitment that the verifier validates using elliptic curve bilinear pairings.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "zero_knowledge",
+      "zk_snarks",
+      "kzg",
+      "cryptography",
+      "polynomials"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826351666,
+    "updatedAt": 1788882605053
+  },
+  {
+    "id": "fact-1788826351666-6r6ub",
+    "text": "KZG commitments evaluate high-degree polynomials into a single elliptic curve group element using structured reference strings from a trusted setup.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "zero_knowledge",
+      "zk_snarks",
+      "kzg",
+      "cryptography",
+      "polynomials"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826351666,
+    "updatedAt": 1788882605051
+  },
+  {
+    "id": "fact-1788826342756-b1xbg",
+    "text": "eBPF programs interact with kernel and userspace exclusively through strictly validated helper functions and thread-safe BPF maps.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "ebpf",
+      "linux_kernel",
+      "verification",
+      "zero_copy",
+      "systems_programming"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826342756,
+    "updatedAt": 1788883588718
+  },
+  {
+    "id": "fact-1788826342756-irlxa",
+    "text": "Registers and stack pointers are strictly tracked as bounded types to prevent out-of-bounds pointer arithmetic, null dereferences, and kernel memory leaks.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "ebpf",
+      "linux_kernel",
+      "verification",
+      "zero_copy",
+      "systems_programming"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826342756,
+    "updatedAt": 1788883588718
+  },
+  {
+    "id": "fact-1788826342755-t0tsq",
+    "text": "The eBPF verifier constructs a directed acyclic graph (DAG) of all possible instruction paths to guarantee program termination and bounded execution limits.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "ebpf",
+      "linux_kernel",
+      "verification",
+      "zero_copy",
+      "systems_programming"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826342755,
+    "updatedAt": 1788883588717
+  },
+  {
+    "id": "fact-1788826306444-7vnbj",
+    "text": "PagedAttention allocates KV-cache blocks dynamically in non-contiguous virtual memory, eliminating internal memory fragmentation and enabling continuous token batching.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "attention",
+      "kv_cache",
+      "gqa",
+      "transformers",
+      "vram_optimization"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826306444,
+    "updatedAt": 1788883528692
+  },
+  {
+    "id": "fact-1788826306444-tj4n9",
+    "text": "Grouped-Query Attention (GQA) clusters multiple query heads to share a single key-value projection, reducing memory bandwidth pressure by up to 8x with minimal perplexity degradation.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "attention",
+      "kv_cache",
+      "gqa",
+      "transformers",
+      "vram_optimization"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826306444,
+    "updatedAt": 1788883528691
+  },
+  {
+    "id": "fact-1788826306443-ceube",
+    "text": "Standard Multi-Head Attention (MHA) maintains separate Key and Value heads for every Query head, causing the KV-cache footprint to scale linearly with head count.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "attention",
+      "kv_cache",
+      "gqa",
+      "transformers",
+      "vram_optimization"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826306443,
+    "updatedAt": 1788883528691
+  },
+  {
+    "id": "fact-1788826293584-emlo7",
+    "text": "When lagging follower nodes require synchronizing past compacted log indices, the leader transmits InstallSnapshot RPC chunks rather than individual AppendEntries.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "raft",
+      "consensus",
+      "log_compaction",
+      "distributed_systems",
+      "snapshots"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826293584,
+    "updatedAt": 1788883468737
+  },
+  {
+    "id": "fact-1788826293584-v1dzf",
+    "text": "To prevent write stalls during snapshot creation, engines fork the state machine or use copy-on-write (COW) memory pages while new writes append to an in-memory frontier buffer.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "raft",
+      "consensus",
+      "log_compaction",
+      "distributed_systems",
+      "snapshots"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826293584,
+    "updatedAt": 1788883468737
+  },
+  {
+    "id": "fact-1788826293584-w5owj",
+    "text": "Raft log compaction isolates committed state machines into immutable point-in-time snapshots, discarding prior log entries up to the last included index.",
+    "category": "domain_knowledge",
+    "tags": [
+      "autonomous_learning",
+      "self_inquiry",
+      "raft",
+      "consensus",
+      "log_compaction",
+      "distributed_systems",
+      "snapshots"
+    ],
+    "source": "nova_self_learning",
+    "confidence": 1,
+    "createdAt": 1788826293584,
+    "updatedAt": 1788883468735
+  },
+  {
+    "id": "fact-1788814530595-cqce4",
+    "text": "I am building an aerospace telemetry satellite pipeline",
+    "category": "user_preference",
+    "tags": [
+      "building",
+      "aerospace",
+      "telemetry"
+    ],
+    "source": "dialogue_extraction",
+    "confidence": 1,
+    "createdAt": 1788814530595,
+    "updatedAt": 1788814559788
+  },
+  {
+    "id": "fact-1788814530595-hcsbm",
+    "text": "My name is Jordan and I am building an aerospace telemetry satellite pipeline",
+    "category": "user_preference",
+    "tags": [
+      "name",
+      "jordan",
+      "and"
+    ],
+    "source": "dialogue_extraction",
+    "confidence": 1,
+    "createdAt": 1788814530595,
+    "updatedAt": 1788814559788
+  },
+  {
+    "id": "fact-1788813583238-qv00a",
+    "text": "Nova Core operates on port 3000 with sub-500ms BM25 RAG latency",
+    "category": "system_fact",
+    "tags": [
+      "nova"
+    ],
+    "source": "api_learn",
+    "confidence": 1,
+    "createdAt": 1788813583238,
+    "updatedAt": 1788813583238
+  },
+  {
+    "id": "fact-seed-1",
+    "text": "Nova Core AI is a self-hosted, standalone AI brain operating without external third-party API keys.",
+    "category": "system_fact",
+    "tags": [
+      "nova-core",
+      "architecture",
+      "standalone"
+    ],
+    "source": "system_bootstrap",
+    "confidence": 1,
+    "createdAt": 1788727164402,
+    "updatedAt": 1788727164402
+  },
+  {
+    "id": "fact-seed-2",
+    "text": "The reasoning pipeline couples semantic intent routing with BM25 vector retrieval and an internal reasoning engine.",
+    "category": "domain_knowledge",
+    "tags": [
+      "rag",
+      "bm25",
+      "reasoning"
+    ],
+    "source": "system_bootstrap",
+    "confidence": 0.98,
+    "createdAt": 1788733564402,
+    "updatedAt": 1788733564402
+  },
+  {
+    "id": "fact-seed-3",
+    "text": "Client API calls authenticate via Bearer token API_SECRET_KEY and conform to OpenAI API specs.",
+    "category": "system_fact",
+    "tags": [
+      "openai-spec",
+      "auth",
+      "security"
+    ],
+    "source": "system_bootstrap",
+    "confidence": 1,
+    "createdAt": 1788743564402,
+    "updatedAt": 1788743564402
+  },
+  {
+    "id": "fact-seed-4",
+    "text": "Prefers strongly-typed TypeScript with strict compile verification and modular component decoupling.",
+    "category": "user_preference",
+    "tags": [
+      "typescript",
+      "clean-code",
+      "developer_guidelines"
+    ],
+    "source": "default_preference",
+    "confidence": 0.95,
+    "createdAt": 1788753564402,
+    "updatedAt": 1788753564402
+  }
+]

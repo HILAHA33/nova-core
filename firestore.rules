@@ -1,0 +1,36 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // User profile and sub-collections (chats, messages, instructions)
+    match /users/{userId} {
+      allow read, write: if true;
+
+      match /chats/{chatId} {
+        allow read, write: if true;
+
+        match /messages/{messageId} {
+          allow read, write: if true;
+        }
+      }
+
+      match /instructions/{instructionId} {
+        allow read, write: if true;
+      }
+    }
+
+    // Distilled facts from user inquiries
+    match /learned_facts_user_inquiries/{factId} {
+      allow read, write: if true;
+    }
+
+    // Distilled facts from autonomous recursive self-learning
+    match /learned_facts_self_learning/{factId} {
+      allow read, write: if true;
+    }
+
+    // Remote and external website traffic logs
+    match /external_traffic/{trafficId} {
+      allow read, write: if true;
+    }
+  }
+}

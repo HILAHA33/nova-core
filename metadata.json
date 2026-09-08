@@ -1,0 +1,6 @@
+{
+  "name": "Nova Core AI",
+  "description": "High-performance, standalone AI Inference & Reasoning Microservice with OpenAI-compatible endpoints, hybrid RAG engine, conversational memory, and inspection dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
